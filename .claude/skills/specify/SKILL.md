@@ -18,12 +18,12 @@ Given a requirement or feature description, produce a complete specification fil
 - A requirement, user story, or feature description from the user.
 
 ### References 
-- [EARS Conventions](./references/EARS.convention.md) 
 - [Model design convention](./references/model-design.convention.md)
 - [Spec template](./assets/spec.template.md)
 
 ### Conventions:
 - `{slug}.spec.md` where `{slug}` is a concise identifier derived from the requirement or feature description.
+- EARS (Easy Approach to Requirements Syntax) for defining acceptance criteria
 
 ## Steps
 ### Step 1:Research
