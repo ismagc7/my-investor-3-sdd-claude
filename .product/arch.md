@@ -59,6 +59,7 @@ front/src/
 | `DELETE /api/rockets/{id}` | `204 No Content` | `rocketsApi.ts` |
 | `GET /api/launches`, `POST /api/launches`, `PUT /api/launches/{id}` | `LaunchRequest` / `LaunchResponse` | `launchesApi.ts` |
 | `GET /api/bookings`, `POST /api/bookings` | `BookingRequest` / `BookingResponse`, `400` on missing passenger data | `bookingsApi.ts` |
+| `POST /api/bookings/{id}/cancel` | Returns `BookingResponse` with status `CANCELLED`, `404` if missing | `bookingsApi.ts` |
 | `GET /api/health` | `HealthResponse` (`200` UP / `503` otherwise) | `healthApi.ts` |
 
 ---
@@ -91,6 +92,7 @@ erDiagram
         Long launch_id FK
         String passengerName
         String passengerEmail
+        String passengerPhone
         BookingStatus status
     }
 ```
@@ -125,8 +127,9 @@ erDiagram
 | `launch` | Launch | FK → Launch, required |
 | `passengerName` | String | required |
 | `passengerEmail` | String | required |
-| `status` | BookingStatus | required — `CONFIRMED`, `CANCELLED`, `PAYED` |
+| `passengerPhone` | String | required |
+| `status` | BookingStatus | required — `CREATED`, `CANCELLED`; not client-supplied, always starts `CREATED` |
 
-**Rules**: A Launch must reference an existing Rocket; a Booking must reference an existing Launch. Booking creation requires non-empty `passengerName`/`passengerEmail` (`400` otherwise). No authentication or user identity is modeled — out of scope per spec.
+**Rules**: A Launch must reference an existing Rocket; a Booking must reference an existing Launch. Booking creation requires non-empty `passengerName`/`passengerEmail`/`passengerPhone` (`400` otherwise). Booking lifecycle is one-directional: `CREATED` → `CANCELLED` only, via `POST /api/bookings/{id}/cancel` — no generic update or delete. No authentication or user identity is modeled — out of scope per spec.
 
 > last updated: 2026-06-30
