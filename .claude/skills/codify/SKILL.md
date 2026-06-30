@@ -29,6 +29,8 @@ Implement a given feature
 ## Output
 - Working source code
 - Unit test for the most critical parts
+- No comments at this stage
+- No e2e testing
 
 ## Verification
 - [ ] Source code must compile succesfully
