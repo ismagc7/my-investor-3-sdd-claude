@@ -7,7 +7,7 @@ disable-model-invocation: true
 # Procedure to codify
 
 ## Rol
-Act as a sennior software engineer
+Act as a senior software engineer
 
 ## Task
 Implement a given feature 
