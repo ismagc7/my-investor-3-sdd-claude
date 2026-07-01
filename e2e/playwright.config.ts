@@ -4,7 +4,7 @@ const BASE_URL = process.env.E2E_BASE_URL ?? 'http://localhost:5173';
 const API_URL = process.env.E2E_API_URL ?? 'http://localhost:8080';
 
 // On Windows the Maven wrapper is `mvnw.cmd`; elsewhere it is `./mvnw`.
-const MVNW = process.platform === 'win32' ? 'mvnw.cmd' : './mvnw';
+const MVNW = process.platform === 'win32' ? '.\\mvnw.cmd' : './mvnw';
 
 export default defineConfig({
   testDir: './tests',

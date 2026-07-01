@@ -1,0 +1,4 @@
+- [ ] Descriptive names; named constants instead of magic values.
+- [ ] Small, single-purpose functions; guard clauses over deep nesting.
+- [ ] Extract duplicated logic; remove dead code and needless abstractions.
+- [ ] Comments explain "why", not "what".
