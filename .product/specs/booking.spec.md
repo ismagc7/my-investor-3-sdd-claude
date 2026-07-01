@@ -47,7 +47,7 @@ Visitors browsing AstroBookings have no way to reserve a seat on a rocket launch
 - Lets a visitor cancel a `CREATED` booking from the list.
 - Surfaces a validation error when required passenger fields are missing.
 
-## Acceptance and Release
+## Acceptance Criteria
 
 - [ ] WHEN a visitor submits the booking form with name, email and phone for a launch, THE backend SHALL create a booking with status `CREATED`.
 - [ ] IF the booking request is missing passenger name, email or phone, THEN THE backend SHALL reject it with a `400` response.
