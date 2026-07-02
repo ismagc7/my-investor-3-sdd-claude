@@ -25,6 +25,23 @@ C4Container
   Rel(container_a, container_b, "{Interaction}", "{Protocol}")
 ```
 
+### Containers table
+| Container | Technology | Responsibility |
+|-----------|------------|----------------|
+| [{Container_Name}](./{container_name}.arch.md) | {Technology} | {Responsibility} |
+
+<example>
+| Container | Technology | Responsibility |
+|-----------|------------|----------------|
+| [db](./db.arch.md) | PostgreSQL | Database |
+| [api](./api.arch.md) | Java Spring Boot | API |
+| [web](./web.arch.md) | React | Web application |
+| [mobile](./mobile.arch.md) | React Native | Mobile application |
+| [desktop](./desktop.arch.md) | Electron | Desktop application |
+| [cli](./cli.arch.md) | CLI | Command line interface |
+| [e2e](./e2e.arch.md) | Playwright | End-to-end tests |
+</example>
+
 ### Code organization
 
 **Pattern**: {Layer-based | Feature-based | Hybrid}.
@@ -45,19 +62,11 @@ C4Container
 
 ## Domain entities
 
-{Entities and key fields folded in here — no separate ER file.}
+{Entities and relationships — no attributes here.}
 
 ```mermaid
 erDiagram
     EntityA ||--o{ EntityB : "relationship"
 ```
-
-### {Entity_Name}
-
-| Field | Type | Constraints |
-|-------|------|-------------|
-| `{field}` | {Type} | {PK, FK → Target, unique, required, ...} |
-
-**Rules**: {key integrity / business rules to enforce during `/codify`.}
 
 > last updated: {Date}

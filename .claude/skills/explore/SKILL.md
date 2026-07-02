@@ -1,19 +1,11 @@
 ---
 name: explore
 description: Shallow explore the current codebase
-user-invocable: true
+user-invocable: false
 disable-model-invocation: true
 ---
 
 ## Explore skill
-
-## Role
-
-Act as a software architect
-
-## Task
-
-Generate the main agent rules
 
 ## Context
 
@@ -24,7 +16,7 @@ Generate the main agent rules
 ### 1 Research
 
 - Explore the current code base folder tree
-- Ask unser clarification questions with closed answers
+- Ask user clarification questions with closed answers
 
 ### 2 Plan
 
@@ -38,5 +30,5 @@ Generate the main agent rules
 
 ## Verification
 
-- [ ] The  `arch.md` exists and its well formed
+- [ ] The `arch.md` exists and its well formed
 - [ ] Mermaid diagrmas ar syntactically correct
