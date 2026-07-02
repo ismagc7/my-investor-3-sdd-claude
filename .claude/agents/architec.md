@@ -4,7 +4,7 @@ description: Gets shallow and deep architecture and code rules
 model: sonnet
 effort: high 
 permissionMode: bypassPermissions
-tools: Agent(explorer, extractor), Read, Bash
+tools: Agent(explorer, extractor), Read, Write, Bash
 ---
 
 # Architect agent
